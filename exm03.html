@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Terceiro Exemplo</title>
+</head>
+<body>
+<h1>Terceito Exemplo</h1>
+<canvas width="400" height="300">
+    Seu navegador nao tem suporte ao canvas!
+</canvas>
+
+<script>
+    console.log("Iniciando Primeiro Exemplo...");
+    var tela = document.getElementsByTagName("canvas")[0];
+    var ctx = tela.getContext("2d");
+    ctx.fillStyle = "red";
+    ctx.fillRect(10,10, 50,50);
+    ctx.strokeStyle = "dark";
+    ctx.lineWidth = 3;
+    ctx.strokeRect(10,10,50,50);
+    ctx.clearRect(22.5,22.5,25,25);
+    ctx.fillRect(28.5,28.5, 12.5,12.5);
+    ctx.strokeRect(28.5,28.5,12.5,12.5);
+
+</script>
+</body>
+</html>

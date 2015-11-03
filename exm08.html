@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Oitavo Exemplo</title>
+</head>
+<body>
+<h1>Oitavo Exemplo</h1>
+<canvas width="400" height="300">
+    Seu navegador nao tem suporte ao canvas!
+</canvas>
+
+<script>
+    console.log("Iniciando Primeiro Exemplo...");
+    var tela = document.getElementsByTagName("canvas")[0];
+    var ctx = tela.getContext("2d");
+    ctx.fillStyle = "rgb(150,150,205)";
+    ctx.strokeStyle = "dark";
+    ctx.lineWidth = 3;
+
+    var i=50;
+    var teto = false;
+
+    setInterval(desenhaTriangulo, 1000/30);
+
+    function desenhaTriangulo(){
+        ctx.clearRect(0,0,400,300);
+        ctx.beginPath();
+        ctx.moveTo(190,30+i*5);
+        ctx.lineTo(210,30+i*5);
+        ctx.lineTo(200,0+i*5);
+        ctx.closePath();
+
+        ctx.fill();
+        ctx.stroke();
+
+        if(i==0){
+            teto = true;
+        }
+        if(i==50){
+            teto = false;
+        }
+        if(teto == false){
+            i--;
+        }
+        else{
+            i++
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

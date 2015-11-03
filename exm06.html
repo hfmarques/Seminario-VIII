@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sexto Exemplo</title>
+</head>
+<body>
+<h1>Sexto Exemplo</h1>
+<canvas width="400" height="300">
+    Seu navegador nao tem suporte ao canvas!
+</canvas>
+
+<script>
+    console.log("Iniciando Primeiro Exemplo...");
+    var tela = document.getElementsByTagName("canvas")[0];
+    var ctx = tela.getContext("2d");
+    ctx.fillStyle = "rgb(150,150,205)";
+    ctx.strokeStyle = "dark";
+    ctx.lineWidth = 3;
+
+    ctx.beginPath();
+    ctx.arc(200,150,100,Math.PI/2, 2*Math.PI,false);
+    ctx.fill();
+    ctx.stroke();
+
+</script>
+</body>
+</html>
